@@ -32,7 +32,9 @@ public class PropertyController {
         propertyService.update(id,property);
     }
     @GetMapping("/search")
-    public List<PropertyDto> search(@RequestParam (required = false) String name , @RequestParam (required = false) PropertyType type){
+    public List<PropertyDto> search(@RequestParam (required = false) String name ,
+                                    @RequestParam (required = false) PropertyType type)
+    {
         return propertyService.getBySearch(name,type);
     }
 }
